@@ -6,4 +6,77 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-brand-50: #f4f7fa;
+    --color-brand-100: #e6edf4;
+    --color-brand-200: #c9d9e8;
+    --color-brand-300: #a3bcd4;
+    --color-brand-400: #7397ba;
+    --color-brand-500: #4f78a0;
+    --color-brand-600: #3c5f85;
+    --color-brand-700: #324d6c;
+    --color-brand-800: #2c415a;
+    --color-brand-900: #1f2e40;
+    --color-brand-950: #15202e;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+/* Rich text bodies (news posts, content pages) rendered from the Trix editor. */
+.rich-text {
+    line-height: 1.75;
+}
+
+.rich-text h2 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 2rem 0 0.75rem;
+}
+
+.rich-text h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.rich-text p {
+    margin-bottom: 1rem;
+}
+
+.rich-text ul,
+.rich-text ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.rich-text ul {
+    list-style: disc;
+}
+
+.rich-text ol {
+    list-style: decimal;
+}
+
+.rich-text a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.rich-text blockquote {
+    border-left: 3px solid var(--color-brand-200);
+    padding-left: 1rem;
+    color: var(--color-stone-600);
+    margin-bottom: 1rem;
+}
+
+/* Trix editor: hide file attachment tools (attachments are disabled). */
+trix-toolbar [data-trix-button-group='file-tools'] {
+    display: none;
+}
+
+trix-editor {
+    min-height: 16rem;
+    background: #fff;
 }
